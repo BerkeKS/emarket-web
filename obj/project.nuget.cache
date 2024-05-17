@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PAhTX2en8VbS7THnkdM+4XlevWefHHoBhkShNJ2+QDouy+sjaXM1cS0sKdIozbjCw/4j6HlhvzNfBZptGeZ38Q==",
+  "dgSpecHash": "AQDnr3UHIS/fsmTyDSdjN1+hmaXxNO6Id+imC0FF8K5nk/Ekoq6RA+Lj/eSkyxrt9+/Tc12zjtHfuAXVgUlJyw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\BERKE SABAH\\Desktop\\Projects\\.NET\\emarket\\emarket.csproj",
+  "projectFilePath": "C:\\Users\\BERKE SABAH\\Desktop\\Projects\\.NET\\emarket-web\\emarket.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BERKE SABAH\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\BERKE SABAH\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

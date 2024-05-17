@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BERKE SABAH\\Desktop\\Projects\\.NET\\emarket\\emarket.csproj": {}
+    "C:\\Users\\BERKE SABAH\\Desktop\\Projects\\.NET\\emarket-web\\emarket.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BERKE SABAH\\Desktop\\Projects\\.NET\\emarket\\emarket.csproj": {
+    "C:\\Users\\BERKE SABAH\\Desktop\\Projects\\.NET\\emarket-web\\emarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BERKE SABAH\\Desktop\\Projects\\.NET\\emarket\\emarket.csproj",
+        "projectUniqueName": "C:\\Users\\BERKE SABAH\\Desktop\\Projects\\.NET\\emarket-web\\emarket.csproj",
         "projectName": "emarket",
-        "projectPath": "C:\\Users\\BERKE SABAH\\Desktop\\Projects\\.NET\\emarket\\emarket.csproj",
+        "projectPath": "C:\\Users\\BERKE SABAH\\Desktop\\Projects\\.NET\\emarket-web\\emarket.csproj",
         "packagesPath": "C:\\Users\\BERKE SABAH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BERKE SABAH\\Desktop\\Projects\\.NET\\emarket\\obj\\",
+        "outputPath": "C:\\Users\\BERKE SABAH\\Desktop\\Projects\\.NET\\emarket-web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\BERKE SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config"
