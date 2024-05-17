@@ -24,7 +24,7 @@ public class LoginController : Controller
     public IActionResult UsernameLogin(UserViewModel userViewModel){
         if (ModelState.IsValid)
         {
-            return RedirectToAction("Index", "Home");   
+            return RedirectToAction("Index", "Home");
         }
         return View(userViewModel);
     }
