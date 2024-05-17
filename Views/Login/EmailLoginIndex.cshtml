@@ -1,0 +1,33 @@
+@model UserViewModel
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">
+                <h3>Login</h3>
+                <h6 class="text-muted">Enter your email and password to login.</h6>
+            </div>
+            <div class="card-body">
+                <form asp-controller="Login" asp-action="EmailLogin" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <input asp-for=Email type="text" class="form-control"/>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input asp-for=Password type="text" class="form-control"/>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </form>
+                <a asp-area="" asp-controller="Login" asp-action="UsernameLoginIndex">Login with your username</a>
+            </div>
+            <div class="card-footer">
+                <div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
