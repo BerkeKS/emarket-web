@@ -23,7 +23,7 @@ public class RegisterController : Controller
         {
             _dbcontext.Users.Add(userViewModel);
             _dbcontext.SaveChanges();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("UsernameLoginIndex", "Login");
         }
         return View(userViewModel);
     }
