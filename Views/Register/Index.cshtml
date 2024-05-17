@@ -18,12 +18,12 @@
                     <div class="mb-3">
                         <label class="form-label">Email</label>
                         <input asp-for=Email type="text" class="form-control"/>
-                        <span asp-validation-for="Username" class="text-danger"></span>
+                        <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Password</label>
                         <input asp-for=Password type="text" class="form-control"/>
-                        <span asp-validation-for="Username" class="text-danger"></span>
+                        <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Name</label>
@@ -34,12 +34,13 @@
                         <input asp-for=Age type="number" class="form-control"/>
                         <span asp-validation-for="Age" class="text-danger"></span>
                     </div>
-                    <div class="mb-3">
-                        <button type="submit" class="btn btn-primary">Register</button>
-                    </div>
                 </form>
             </div>
-            <div class="card-footer"></div>
+            <div class="card-footer">
+                <div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
