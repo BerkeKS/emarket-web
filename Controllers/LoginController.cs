@@ -1,5 +1,6 @@
 using emarket.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace emarket.Controllers;
 public class LoginController : Controller
@@ -10,32 +11,42 @@ public class LoginController : Controller
         _dbcontext = dbContext;
     }
     public IActionResult UsernameLoginIndex() {
-        var userViewModel = new UserViewModel(); 
-        return View(userViewModel);
+        var usernameLoginViewModel = new UsernameLoginViewModel(); 
+        return View(usernameLoginViewModel);
     }
 
     public IActionResult EmailLoginIndex(){
-        var userViewModel = new UserViewModel(); 
-        return View(userViewModel);
+        var emailLoginViewModel = new EmailLoginViewModel(); 
+        return View(emailLoginViewModel);
     }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult UsernameLogin(UserViewModel userViewModel){
+    public IActionResult UsernameLogin(UsernameLoginViewModel usernameLoginViewModel){
         if (ModelState.IsValid)
         {
-            return RedirectToAction("Index", "Home");
+            var user = _dbcontext.Users.FirstOrDefault(u => u.Username == usernameLoginViewModel.Username);
+            if (user != null && user.Password == usernameLoginViewModel.Password) {
+                return RedirectToAction("Index", "Home");   
+            } else{
+                ModelState.AddModelError("", "Invalid username or password.");
+            }
         }
-        return View(userViewModel);
+        return View(usernameLoginViewModel);
     }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult EmailLogin(UserViewModel userViewModel){
+    public IActionResult EmailLogin(EmailLoginViewModel emailLoginViewModel){
         if (ModelState.IsValid)
         {
-            return RedirectToAction("Index", "Home");   
+            var user = _dbcontext.Users.FirstOrDefault(u => u.Email == emailLoginViewModel.Email);
+            if(user != null && user.Password == emailLoginViewModel.Password){
+                return RedirectToAction("Index", "Home");
+            } else{
+                ModelState.AddModelError("", "Invalid email or password.");
+            }
         }
-        return View(userViewModel);
+        return View(emailLoginViewModel);
     }
 }
