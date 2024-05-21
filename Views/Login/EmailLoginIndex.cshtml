@@ -20,12 +20,14 @@
                         <input asp-for=Password type="text" class="form-control"/>
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
                 </form>
-                <a asp-area="" asp-controller="Login" asp-action="UsernameLoginIndex">Login with your username</a>
             </div>
             <div class="card-footer">
                 <div>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <a asp-area="" asp-controller="Login" asp-action="UsernameLoginIndex">Login with your username</a>
                 </div>
             </div>
         </div>

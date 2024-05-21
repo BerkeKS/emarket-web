@@ -20,13 +20,13 @@
                         <input asp-for=Password type="text" class="form-control"/>
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
                 </form>
-                <a asp-area="" asp-controller="Login" asp-action="EmailLoginIndex">Login with your email</a>
             </div>
             <div class="card-footer">
-                <div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </div>
+                <a asp-area="" asp-controller="Login" asp-action="EmailLoginIndex">Login with your email</a>
             </div>
         </div>
     </div>
