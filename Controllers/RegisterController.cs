@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace emarket.Controllers;
 
-[ApiController]
 public class RegisterController : Controller
 {
     private readonly EMarketDbContext _dbcontext;
@@ -27,14 +26,5 @@ public class RegisterController : Controller
             return RedirectToAction("UsernameLoginIndex", "Login");
         }
         return View(userViewModel);
-    }
-
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    [Route("/register")]
-    public JsonResult RegisterRoute(UserViewModel userViewModel){
-        _dbcontext.Users.Add(userViewModel);
-        _dbcontext.SaveChanges();
-        return new JsonResult(Ok(userViewModel));
     }
 }
