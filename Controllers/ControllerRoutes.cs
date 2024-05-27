@@ -13,7 +13,6 @@ public class ControllerRoutes
     }
 
     [HttpPost]
-    [ValidateAntiForgeryToken]
     [Route("/usernamelogin")]
     public String UsernameLoginRoute(UsernameLoginViewModel usernameLoginViewModel){
         var user = _dbcontext.Users.FirstOrDefault(u => u.Username == usernameLoginViewModel.Username);
@@ -25,7 +24,6 @@ public class ControllerRoutes
     }
 
     [HttpPost]
-    [ValidateAntiForgeryToken]
     [Route("/emaillogin")]
     public String EmailLoginRoute(EmailLoginViewModel emailLoginViewModel){
         var user = _dbcontext.Users.FirstOrDefault(u => u.Email == emailLoginViewModel.Email);
@@ -37,7 +35,6 @@ public class ControllerRoutes
     }
 
     [HttpPost]
-    [ValidateAntiForgeryToken]
     [Route("/register")]
     public UserViewModel RegisterRoute(UserViewModel userViewModel){
         _dbcontext.Users.Add(userViewModel);
