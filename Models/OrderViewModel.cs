@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace emarket.Models;
 
@@ -6,9 +7,9 @@ public class OrderViewModel {
 
     [Key]
     public String Id {get; set;}
-    [Required]
-    public List<Tuple<String, int>> PurchasedItems {get; set;}
-    [Required]
+    [ForeignKey("Purchaser")]
+    public String PurchaserName {get; set;}
+    public UserViewModel Purchaser {get; set;}
     public double TotalPrice {get; set;}
     public bool IsConfirmed {get; set;}
 }
