@@ -34,6 +34,11 @@ public class ControllerRoutes
             }
     }
 
+    [Route("/logout")]
+    public String Logout(String username){
+        return "Successful";
+    }
+
     [HttpPost]
     [Route("/register")]
     public UserViewModel RegisterRoute(UserViewModel userViewModel){
