@@ -61,4 +61,9 @@ public class LoginController : Controller
         }
         return View(emailLoginViewModel);
     }
+
+    public IActionResult Logout(String username){
+        Response.Cookies.Delete("Login");
+        return RedirectToAction("Index", "Home");
+    }
 }
