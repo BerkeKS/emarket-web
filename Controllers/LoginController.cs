@@ -27,12 +27,10 @@ public class LoginController : Controller
         {
             var user = _dbcontext.Users.FirstOrDefault(u => u.Username == usernameLoginViewModel.Username);
             if (user != null && user.Password == usernameLoginViewModel.Password) {
-                /*
-                CookieOptions cookie = new CookieOptions{
+                CookieOptions cookieOptions = new CookieOptions{
                     Expires = DateTime.Now.AddDays(1)
                 };
-                */
-                Response.Cookies.Append("Login", usernameLoginViewModel.Username!);
+                Response.Cookies.Append("Login", usernameLoginViewModel.Username!, cookieOptions);
                 return RedirectToAction("Index", "Home");   
             } else{
                 ModelState.AddModelError("", "Invalid username or password.");
@@ -48,12 +46,10 @@ public class LoginController : Controller
         {
             var user = _dbcontext.Users.FirstOrDefault(u => u.Email == emailLoginViewModel.Email);
             if(user != null && user.Password == emailLoginViewModel.Password){
-                /*
-                CookieOptions cookie = new CookieOptions{
+                CookieOptions cookieOptions = new CookieOptions{
                     Expires = DateTime.Now.AddDays(1)
                 };
-                */
-                Response.Cookies.Append("Login", user.Username!);
+                Response.Cookies.Append("Login", user.Username!, cookieOptions);
                 return RedirectToAction("Index", "Home");
             } else{
                 ModelState.AddModelError("", "Invalid email or password.");
