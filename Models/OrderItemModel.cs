@@ -10,6 +10,5 @@ public class OrderItemModel {
     [ForeignKey("Purchased")]
     public String PurchasedItem {get; set;}
     public ItemViewModel Purchased {get; set;}
-    
     public int PurchasedAmount {get; set;}
 }
