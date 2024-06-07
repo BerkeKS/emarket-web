@@ -9,5 +9,6 @@ public class EMarketDbContext : DbContext
     }
     public DbSet<ItemViewModel> Items {get; set;}
     public DbSet<UserViewModel> Users {get; set;}
-    public DbSet<OrderViewModel> Orders {get; set;}
+    public DbSet<OrderItemModel> PurchasedItems {get; set;}
+    public DbSet<OrderUserModel> Purchasers {get; set;}
 }
